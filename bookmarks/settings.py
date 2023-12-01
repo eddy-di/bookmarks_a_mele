@@ -130,3 +130,11 @@ LOGIN_REDIRECT_URL = 'dashboard'
 LOGIN_URL = 'login'
 
 LOGOUT_URL = 'logout'
+
+# Authentication backends
+# https://docs.djangoproject.com/en/4.1/topics/auth/customizing/#other-authentication-sources
+
+AUTHENTICATION_BACKENDS = [
+'django.contrib.auth.backends.ModelBackend',
+'account.authentication.EmailAuthBackend',
+]
